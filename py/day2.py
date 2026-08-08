@@ -34,10 +34,10 @@ media = (nota1 + nota2)/2
 print("")
 if media >= 7:
     print(f"Sua média é {media:.2f}, você foi APROVADO")
-elif media < 5:
-    print(f"Sua média é {media:.2f}, você foi REPROVADO")
+elif media >= 5:
+    print(f"Sua média é {media:.2f}, você está de RECUPERAÇÃO")
 else:
-    print(f"Sua média é {media:.2f}, voce está de RECUPERAÇÃO")
+    print(f"Sua média é {media:.2f}, voce foi REPROVADO")
 print("")
 
 # Exercicio 4 - 20xp
@@ -88,29 +88,18 @@ num2 = int(input("Digite o segundo numero: "))
 num3 = int(input("Digite o terceiro numero: "))
 print("")
 
-if num1 > num2 and num1 < num3:
-    maior = num3
-    meio = num1
-    menor = num2
-elif num2 > num3 and num2 < num1:
+if num1 >= num2 and num1 >= num3:
     maior = num1
-    meio = num2
-    menor = num3
-elif num3 > num1 and num3 < num2:
+elif num2 >= num1 and num2 >= num3:
     maior = num2
-    meio = num3
-    menor = num1
-elif num2 > num1 and num2 < num3:
+else:
     maior = num3
-    meio =num2
+
+if num1 <= num2 and num1 <= num3:
     menor = num1
-elif num3 > num2 and num3 < num1:
-    maior = num1
-    meio = num3
+elif num2 <= num1 and num2 <= num3:
     menor = num2
-elif num1 > num3 and num1 < num2:
-    maior = num2
-    meio = num1
+else:
     menor = num3
 
 print("-----------------------------")
@@ -128,9 +117,9 @@ print("")
 print("---- ENTRAR ----")
 print("")
 senha_d = input("Digite a senha de 8 digitos: ")
-senha_n = int(input("Digite a senha numérica: "))
+senha_n = input("Digite a senha numérica: ")
 d_ok = "python27"
-n_ok = 8826
+n_ok = "080826"
 
 if senha_d == d_ok and senha_n == n_ok:
     print("Acesso Permitido...")
