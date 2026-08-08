@@ -93,3 +93,8 @@ print(f"{hora} {hr}, {minutos} minutos e {seg} segundos")
 print("")
 print("=================================")
 print("")
+
+print("-------------------------------------------")
+print("Dia 1 finalizado")
+print("XP ganho: 110xp")
+print("======== Total acumulado: 200XP ==========")

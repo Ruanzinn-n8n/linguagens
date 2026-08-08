@@ -79,3 +79,9 @@ print(f"Python = {pyt}")
 print(f"Média = {media:.2f}")
 print("")
 print("=========================")
+
+
+print("-------------------------------------------")
+print("Dia 0 finalizado")
+print("XP ganho: 90xp")
+print("======== Total acumulado: 90XP ==========")

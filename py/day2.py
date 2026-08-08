@@ -2,19 +2,18 @@
 
 # Exercicio 1 - 10xp
 print("Exercicio 1 concluido")
-"""print("")
+print("")
 idad = int(input("Quantos anos você tem? "))
 
 if idad >= 18:
     print("Você é maior de idade!")
 else:
     print("Você é menor de idade!")
-"""
 print("")
 
 # Exercicio 2 - 10xp
 print("Exercicio 2 concluido")
-"""print("")
+print("")
 num = int(input("Digite um numero inteiro: "))
 
 if num > 0:
@@ -23,12 +22,11 @@ elif num < 0:
     print(f"{num} é um inteiro NEGATIVO")
 else:
     print("ZERO")
-"""
 print("")
 
 # Exercicio 3 - 15xp
 print("Exercicio 3 concluido")
-"""print("")
+print("")
 nota1 = int(input("Digite a primeira nota: "))
 nota2 = int(input("Digite a segunda nota: "))
 media = (nota1 + nota2)/2
@@ -40,12 +38,11 @@ elif media < 5:
     print(f"Sua média é {media:.2f}, você foi REPROVADO")
 else:
     print(f"Sua média é {media:.2f}, voce está de RECUPERAÇÃO")
-"""
 print("")
 
 # Exercicio 4 - 20xp
 print("Exercicio 4 concluido")
-"""print("")
+print("")
 print("---- Classificação de idade ----")
 print("")
 idade = int(input("Qual sua idade? "))
@@ -59,12 +56,11 @@ elif idade <= 59:
     print(f"Você tem {idade} anos, é um adulto.")
 else:
     print(f"Você tem {idade} anos, é idoso.")
-"""
 print("")
 
 # Exercicio 5 - 20xp
 print("Exercicio 5 concluido")
-"""print("")
+print("")
 print("---- Quer dirigir? ----")
 print("")
 idades = int(input("Quantos anos você tem? "))
@@ -80,5 +76,68 @@ elif idades >= 18 and cnh in nao:
     print("=== Não pode dirigir ===")
 else:
     print("Você é menor de idade, logo não tem permissão para dirigir!")
-    """
 print("")
+
+# Desafio - 40XP
+print("Desafio concluido")
+print("")
+print("--- Maior e Menor ---")
+print("")
+num1 = int(input("Digite o primeiro numero: "))
+num2 = int(input("Digite o segundo numero: "))
+num3 = int(input("Digite o terceiro numero: "))
+print("")
+
+if num1 > num2 and num1 < num3:
+    maior = num3
+    meio = num1
+    menor = num2
+elif num2 > num3 and num2 < num1:
+    maior = num1
+    meio = num2
+    menor = num3
+elif num3 > num1 and num3 < num2:
+    maior = num2
+    meio = num3
+    menor = num1
+elif num2 > num1 and num2 < num3:
+    maior = num3
+    meio =num2
+    menor = num1
+elif num3 > num2 and num3 < num1:
+    maior = num1
+    meio = num3
+    menor = num2
+elif num1 > num3 and num1 < num2:
+    maior = num2
+    meio = num1
+    menor = num3
+
+print("-----------------------------")
+print(f" Primeiro numero: {num1}")
+print(f" Segundo numero: {num2}")
+print(f" Terceiro numero: {num3}")
+print("")
+print(f" Maior: {maior}")
+print(f" Menor: {menor}")
+print("")
+
+# Desafio extra - 30xp
+print("Extra")
+print("")
+print("---- ENTRAR ----")
+print("")
+senha_d = input("Digite a senha de 8 digitos: ")
+senha_n = int(input("Digite a senha numérica: "))
+d_ok = "python27"
+n_ok = 8826
+
+if senha_d == d_ok and senha_n == n_ok:
+    print("Acesso Permitido...")
+else:
+    print("!!!! Acesso NEGADO !!!!")
+print("")
+
+print("Dia 2 finalizado")
+print("XP ganho: 145xp")
+print("======== Total acumulado: 345XP ==========")
