@@ -26,8 +26,7 @@ tab = int(input("Qual tabuada deseja saber? "))
 print("------------------------------------")
 
 for i in range(1, 11):
-    resul = tab
-    resul *= i
+    resul = tab * i
     print(f"{tab}x{i} = {resul}")
 print("")
 
@@ -52,11 +51,12 @@ senha = ""
 cont = 0
 
 while senha != "python27":
+    cont += 1
     print("-----------------------------")
     senha = input("--- Digite a senha:  ")
     if senha != "python27":
         print("Senha INCORRETA! tente novamente...")
-    cont += 1
+
 print("...")
 print(f"Senha correta! Você acertou em {cont} tentativas.")
 print("Acessando sistema...")
