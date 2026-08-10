@@ -35,8 +35,8 @@ for i in range(1, 11):
 print("")
 
 # Exercicio 4 - 20xp
-print("Exercicio 4")
-print("")
+print("Exercicio 4 concluido")
+"""print("")
 num = int(input("Digite um número inteiro: "))
 print("------------------------------------")
 num += 1
@@ -45,4 +45,24 @@ soma = 0
 for i in range(1, num):
     soma += i
 print(f" O resultado é {soma}.")
+"""
+print("")
+
+# Exercicio 5 - 20xp
+print("Exercicio 5")
+print("")
+print("------ ACESSAR SISTEMA ------")
+senha = ""
+cont = 0
+
+while senha != "python27":
+    print("-----------------------------")
+    senha = input("--- Digite a senha:  ")
+    if senha != "python27":
+        print("Senha INCORRETA! tente novamente...")
+    cont += 1
+print("...")
+print(f"Senha correta! Você acertou em {cont} tentativas.")
+print("Acessando sistema...")
+""""""
 print("")
