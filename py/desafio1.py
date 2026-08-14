@@ -1,1 +1,38 @@
 # desafios de fixação do conteúdo dos ultimos 4 dias
+
+# 01
+print("--------------------------")
+print("O numero misterioso...")
+print("--------------------------")
+print("")
+num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+maior = 0
+menor = 0
+par = 0
+impar = 0
+soma = 0
+
+for i in num:
+    num[i] = int(input(f"Digite o {i+1}º número: "))
+    soma += num[i]
+    if num[i] % 2 == 0:
+        par += 1
+    else:
+        impar += 1
+
+for n in num:
+    numero = num[n]
+    if numero > num[n-1]:
+        maior = numero
+
+print(f"O {maior} é o maior número.")
+print(f"O {menor} é o menor número.")
+if par != 1:
+    print(f"Tem {par} números pares.")
+else:
+    print(f"Tem {par} número par")
+
+if impar != 1:
+    print(f"Tem {impar} números ímpares.")
+else:
+    print(f"Tem {impar} número ímpar.")
