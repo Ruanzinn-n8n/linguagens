@@ -1,13 +1,11 @@
 # desafios de fixação do conteúdo dos ultimos 4 dias
 
 # 01
-print("--------------------------")
+"""print("--------------------------")
 print("O numero misterioso...")
 print("--------------------------")
 print("")
 num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-maior = 0
-menor = 0
 par = 0
 impar = 0
 soma = 0
@@ -20,11 +18,18 @@ for i in num:
     else:
         impar += 1
 
-for n in num:
-    numero = num[n]
-    if numero > num[n-1]:
-        maior = numero
+maior = num[0]
+menor = num[0]
 
+for i in num:
+    if i > maior:
+        maior = i
+
+    if i < menor:
+        menor = i
+
+print("")
+print("---------------------------------------")
 print(f"O {maior} é o maior número.")
 print(f"O {menor} é o menor número.")
 if par != 1:
@@ -36,3 +41,12 @@ if impar != 1:
     print(f"Tem {impar} números ímpares.")
 else:
     print(f"Tem {impar} número ímpar.")
+print("-------------------------------------")
+"""
+print("")
+
+# 02
+print("Saque")
+print("")
+print("Digite o valor que deseja sacar:")
+saque = int(input())
