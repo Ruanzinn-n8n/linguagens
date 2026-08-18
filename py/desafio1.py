@@ -50,3 +50,10 @@ print("Saque")
 print("")
 print("Digite o valor que deseja sacar:")
 saque = int(input())
+cem = 0
+cinq = 0
+vinte = 0
+dez = 0
+cinco = 0
+dois = 0
+um = 0
