@@ -19,19 +19,19 @@ for i in num:
         impar += 1
 
 maior = num[0]
-menor = num[0]
+menorrr = num[0]
 
 for i in num:
     if i > maior:
         maior = i
 
-    if i < menor:
-        menor = i
+    if i < menorrr:
+        menorrr = i
 
 print("")
 print("---------------------------------------")
 print(f"O {maior} é o maior número.")
-print(f"O {menor} é o menor número.")
+print(f"O {menorrr} é o menorrr número.")
 if par != 1:
     print(f"Tem {par} números pares.")
 else:
@@ -109,92 +109,31 @@ print("")
 #5
 
 #6
-print("Notas da turma")
+"""print("Notas da turma")
 print("-----------------")
+alunos = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 medias = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 print("Digite a nota dos alunos")
 
-print("Aluno 1:")
-nota1 = int(input("--- Nota 1: "))
-nota2 = int(input("--- Nota 2: "))
-medias[0] = (nota1 + nota2)/2
-print(f"Média: {medias[0]}")
-
-print("")
-print("Aluno 2:")
-nota3 = int(input("--- Nota 1: "))
-nota4 = int(input("--- Nota 2: "))
-medias[1] = (nota3 + nota4)/2
-print(f"Média: {medias[1]}")
-
-print("")
-print("Aluno 3:")
-nota5 = int(input("--- Nota 1: "))
-nota6 = int(input("--- Nota 2: "))
-medias[2] = (nota5 + nota6)/2
-print(f"Média: {medias[2]}")
-
-print("")
-print("Aluno 4:")
-nota7 = int(input("--- Nota 1: "))
-nota8 = int(input("--- Nota 2: "))
-medias[3] = (nota7 + nota8)/2
-print(f"Média: {medias[3]}")
-
-print("")
-print("Aluno 5:")
-nota9 = int(input("--- Nota 1: "))
-nota10 = int(input("--- Nota 2: "))
-medias[4] = (nota9 + nota10)/2
-print(f"Média: {medias[4]}")
-
-print("")
-print("Aluno 6:")
-nota11 = int(input("--- Nota 1: "))
-nota12 = int(input("--- Nota 2: "))
-medias[5] = (nota11 + nota12)/2
-print(f"Média: {medias[5]}")
-
-print("")
-print("Aluno 7:")
-nota13 = int(input("--- Nota 1: "))
-nota14 = int(input("--- Nota 2: "))
-medias[6] = (nota13 + nota14)/2
-print(f"Média: {medias[6]}")
-
-print("")
-print("Aluno 8:")
-nota15 = int(input("--- Nota 1: "))
-nota16 = int(input("--- Nota 2: "))
-medias[7] = (nota15 + nota16)/2
-print(f"Média: {medias[7]}")
-
-print("")
-print("Aluno 9:")
-nota17 = int(input("--- Nota 1: "))
-nota18 = int(input("--- Nota 2: "))
-medias[8] = (nota17 + nota18)/2
-print(f"Média: {medias[8]}")
-
-print("")
-print("Aluno 2:")
-nota19 = int(input("--- Nota 1: "))
-nota20 = int(input("--- Nota 2: "))
-medias[9] = (nota10 + nota20)/2
-print(f"Média: {medias[9]}")
+for i in alunos:
+    print(f"Aluno {i+1}:")
+    nota1 = int(input("--- Nota 1: "))
+    nota2 = int(input("--- Nota 2: "))
+    medias[i] = (nota1 + nota2)/2
+    print(f"Média: {medias[i]}")
+    print("")
 
 media_t = (medias[0] + medias[1] + medias[2] + medias[3] + medias[4] + medias[5] + medias[6] + medias[7] + medias[8] + medias[9])/10
-
-maio = medias[0]
-meno = medias[0]
+maiorr = medias[0]
+menorr = medias[0]
 apr = 0
 rec = 0
 rep = 0
 for i in medias:
-    if maio < i:
-        maio = i
-    if meno > i:
-        meno = i
+    if maiorr < i:
+        maiorr = i
+    if menorr > i:
+        menorr = i
 
     if i >= 7:
         apr += 1
@@ -208,8 +147,32 @@ print("")
 print("===== Turma A =====")
 print("-------------------")
 print(f"Média da turma: {media_t}")
-print(f"Maior nota: {maio}")
-print(f"Menor nota: {meno}")
+print(f"Maior nota: {maiorr}")
+print(f"Menor nota: {menorr}")
 print(f"Aprovados: {apr}")
 print(f"Recuperação: {rec}")
 print(f"Reprovados: {rep}")
+"""
+print("")
+
+#7
+print("Maior e Segundo maior")
+print("")
+nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+print("Digite 10 números inteiros: ")
+for i in nums:
+    nums[i] = int(input())
+
+maio = nums[0]
+s_maior = 0
+for i in nums:
+    if i >= maio:
+        maio = i
+for i in nums:
+    if i >= s_maior and i < maio:
+        s_maior = i
+print("")
+
+print(f" Maior: {maio}")
+print(f" Segundo maior: {s_maior}")
