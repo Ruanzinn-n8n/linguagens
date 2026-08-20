@@ -50,6 +50,7 @@ print("Saque")
 print("")
 print("Digite o valor que deseja sacar:")
 saque = int(input())
+saque_t = saque
 cem = 0
 cinq = 0
 vinte = 0
@@ -57,3 +58,9 @@ dez = 0
 cinco = 0
 dois = 0
 um = 0
+
+if saque > 100:
+    while saque_t > 100:
+        cem += 1
+        saque_t = saque - 100
+print(f"Notas de cem: {cem}")
