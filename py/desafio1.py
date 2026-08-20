@@ -156,7 +156,7 @@ print(f"Reprovados: {rep}")
 print("")
 
 #7
-print("Maior e Segundo maior")
+"""print("Maior e Segundo maior")
 print("")
 nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -176,3 +176,43 @@ print("")
 
 print(f" Maior: {maio}")
 print(f" Segundo maior: {s_maior}")
+"""
+print("")
+
+#8
+"""print("Sem repetir...")
+print("")
+num = []
+num_s_rep = []
+
+print("Digite 10 números inteiros:")
+for i in range(10):
+    num.append(int(input("... ")))
+for i in num:
+    if i not in num_s_rep:
+        num_s_rep.append(i)
+print("")
+
+print(f"Lista 1: {num}")
+print(f"Lista filtrada: {num_s_rep}")
+"""
+print("")
+
+#9
+print("Frequência")
+print("")
+lista = []
+
+print("Digite 10 números")
+for i in range(10):
+    lista.append(int(input(f"Num {i+1}: ")))
+
+print("")
+procurar = int(input("Qual valor deseja encontrar? "))
+
+cont = 0
+for i in lista:
+    if i == procurar:
+        cont += 1
+
+print(f" O numero {procurar} foi encontrado {cont} vezes.")
