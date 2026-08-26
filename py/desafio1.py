@@ -199,7 +199,7 @@ print(f"Lista filtrada: {num_s_rep}")
 print("")
 
 #9
-print("Frequência")
+"""print("Frequência")
 print("")
 lista = []
 
@@ -215,4 +215,38 @@ for i in lista:
     if i == procurar:
         cont += 1
 
+print("")
 print(f" O numero {procurar} foi encontrado {cont} vezes.")
+"""
+print("")
+
+#10
+print("  Busca")
+print("----------")
+biblioteca = []
+
+print("Digite 10 números")
+for i in range(10):
+    biblioteca.append(int(input()))
+
+print("")
+print("Qual numero deseja encontrar?")
+busca = int(input())
+
+if busca in biblioteca:
+    posicao1 = biblioteca.index(busca)
+    qnt = 0
+    for i in biblioteca:
+        if i == busca:
+            qnt += 1
+
+#ainda não está encontrando a ultima posição!
+
+if qnt > 0:
+    print("Existe!!")
+    print(f"Quantidade: {qnt}")
+    print(f"Primeira posição: {posicao1}")
+    print(f"Última posição: {posicao2}")
+else:
+    print("Não existe!")
+
