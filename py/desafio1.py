@@ -221,7 +221,7 @@ print(f" O numero {procurar} foi encontrado {cont} vezes.")
 print("")
 
 #10
-print("  Busca")
+"""print("  Busca")
 print("----------")
 biblioteca = []
 
@@ -232,15 +232,14 @@ for i in range(10):
 print("")
 print("Qual numero deseja encontrar?")
 busca = int(input())
+qnt = 0
 
 if busca in biblioteca:
     posicao1 = biblioteca.index(busca)
-    qnt = 0
+    posicao2 = len(biblioteca) - 1 - biblioteca[::-1].index(busca)
     for i in biblioteca:
         if i == busca:
             qnt += 1
-
-#ainda não está encontrando a ultima posição!
 
 if qnt > 0:
     print("Existe!!")
@@ -249,4 +248,84 @@ if qnt > 0:
     print(f"Última posição: {posicao2}")
 else:
     print("Não existe!")
+"""
+print("")
 
+#11
+"""print("Votação roubada do Brasil")
+print("")
+dc = 0
+lula = 0
+bol = 0
+renan = 0
+anna = 0
+print("---- Digite em quem deseja votar ----")
+print("== 13- Lula ladrão    22- Bolsonaro  ==")
+print("== 14- Renan santos   11- Anna Júlia ==")
+
+while dc != 1:
+    voto = int(input("Digite o número: "))
+    print("")
+    match voto:
+        case 13:
+            lula += 1
+            print("---- Digite em quem deseja votar ----")
+        case 22:
+            bol += 1
+            print("---- Digite em quem deseja votar ----")
+        case 14:
+            renan += 1
+            print("---- Digite em quem deseja votar ----")
+        case 11:
+            anna += 1
+            print("---- Digite em quem deseja votar ----")
+        case 0:
+            dc = 1
+            print("")
+        case _:
+            print("voto inválido! tente novamente.")
+            print("")
+            print("---- Digite em quem deseja votar ----")
+
+print("====== Resultados")
+print(f"Lula ladrão: {lula}")
+print(f"Bolsonaro: {bol}")
+print(f"Renan Santos: {renan}")
+print(f"Anna Júlia: {anna}")
+"""
+print("")
+
+#12
+print("--- Caixa Eletrônico ---")
+print("------------------------")
+saldo = 1000
+print("1- Consultar saldo")
+print("2- Depositar")
+print("3- Sacar")
+print("0- Sair")
+print("")
+dcc = 0
+
+while dcc != 1:
+    print("Selecione uma opção:")
+    opc = int(input())
+
+    match opc:
+        case 1:
+            print(f"Saldo: R${saldo}")
+        case 2:
+            deposito = int(input("Deposite um valor: "))
+            if deposito > 0:
+                saldo += deposito
+                print("Valor depositado com sucesso!")
+            else:
+                print("Valor inválido!")
+        case 3:
+            saque = int(input("Digite o valor do saque: "))
+            if saque > 0 and saque <= saldo:
+                saldo -= saque
+                print("Saque feito com sucesso!")
+        case 0:
+            dcc = 1
+        case _:
+            print("Opção inválida!")
