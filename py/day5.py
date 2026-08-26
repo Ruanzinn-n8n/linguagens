@@ -2,30 +2,28 @@
 
 # Exercicio 1 - 10xp
 print("Exercicio 1 concluido")
-"""print("")
+print("")
 def saudacao(nome):
     print(f"Olá {nome}, saudações!")
 
 pessoa = input("Digite seu nome: ")
 i = pessoa
 saudacao(i)
-"""
 print("")
 
 # Exercicio 2 - 10xp
 print("Exercicio 2 concluido")
-"""print("")
+print("")
 def soma(a, b):
     return a + b
 
 resultado = soma(1000, -7)
 print(resultado)
-"""
 print("")
 
 # Exercicio 3 - 15xp
 print("Exercicio 3 concluido")
-"""print("")
+print("")
 def eh_par(numero):
     if (numero % 2) == 0:
         return True
@@ -35,12 +33,11 @@ def eh_par(numero):
 valor = int(input("Digite um número: "))
 resultado = eh_par(valor)
 print(resultado)
-"""
 print("")
 
 # Exercicio 4 - 20xp
 print("Exercicio 4 concluido")
-"""print("")
+print("")
 def calcular_media(n1, n2, n3):
     return (n1 + n2 + n3)/3
 def situacao(media):
@@ -53,19 +50,18 @@ def situacao(media):
 
 nota = calcular_media(7, 10, 9)
 situacao(nota)
-"""
 print("")
 
 # Exercicio 5 - 20xp
 print("Exercicio 5 concluido")
-"""print("")
+print("")
 print("Positivos e negativos")
 print("")
 
 def analisar_lista(numeros):
     quanto = int(input("Quantos números deseja contar: "))
     for i in range(quanto):
-        lista.append(int(input(f"Número {i+1}:  ")))
+        numeros.append(int(input(f"Número {i+1}:  ")))
     p = 0
     n = 0
     z = 0
@@ -82,13 +78,12 @@ def analisar_lista(numeros):
 lista = []
 
 analisar_lista(lista)
-"""
 print("")
 
 # Exercicio 6 - 25xp
 print("Exercicio 6 concluido")
-"""print("")
-def maior_numero(c):
+print("")
+def maior_numero():
     lista = []
     maior = 0
     print("Digite um número:")
@@ -111,12 +106,11 @@ def menor_numero():
 
 maior_numero()
 menor_numero()
-"""
 print("")
 
 # Exercicio 7 - 25xp
 print("Exercicio 7 concluido")
-"""print("")
+print("")
 def contar_letra(texto, letra):
     cont = 0
     palavra = texto
@@ -126,11 +120,10 @@ def contar_letra(texto, letra):
     print(f"Na palavra {texto} tem {cont} letras {letra}!")
 
 contar_letra("banana", "a")
-"""
 print("")
 
 # Exercicio 8 - 30xp
-print("Exercicio 8")
+print("Exercicio 8 concluido")
 print("")
 print("É um palindromo?")
 
@@ -154,3 +147,4 @@ palavra = input("Digite uma palavra:  ")
 
 resultado = eh_palindromo(palavra)
 print(resultado)
+print("")
