@@ -1,5 +1,5 @@
 print("Questão 1 - Strings - concluida")
-"""print("")
+print("")
 
 def string_unica(texto):
     palavra = texto
@@ -16,11 +16,10 @@ receba = input("Digite uma palavra:  ")
 resultado = string_unica(receba)
 print("")
 print(resultado)
-"""
 print("")
 
 print("Questão 2 - Frequência")
-"""print("")
+print("")
 
 def frequencia(numeros):
     for i in numeros:
@@ -30,7 +29,7 @@ def frequencia(numeros):
                 cont += 1
         print(f"O número {i} apareceu {cont} vezes!")
 
-# não consegui fazer com falasse apenas 1 vez para cada número.
+# não consegui fazer com que falasse apenas 1 vez para cada número.
 
 lista = []
 print("Digite 8 números;")
@@ -38,15 +37,14 @@ for i in range(8):
     lista.append(int(input(f"N°{i+1}: ")))
 
 frequencia(lista)
-"""
 print("")
 
 print("Questão 3 - Segundo Maior")
-"""print("")
+print("")
 
 def segundo_maior(numeros):
-    maior = 0
-    s_maior = 0
+    maior = numeros[0]
+    s_maior = numeros[0]
     for i in numeros:
         if i > maior:
             maior = i
@@ -61,11 +59,10 @@ for i in range(6):
     lista.append(int(input(f"N°{i+1}: ")))
 print("")
 print(segundo_maior(lista))
-"""
 print("")
 
 print("Questão 4 - Anagrama - concluido")
-"""print("")
+print("")
 
 def anagrama(text1, text2):
     tamanho1 = len(text1) -1
@@ -87,7 +84,6 @@ palavra2 = input("Digite a segunda palavra: ")
 
 resultado = anagrama(palavra1, palavra2)
 print(resultado)
-"""
 print("")
 
 print("Questão 5 - Binário")
@@ -95,7 +91,7 @@ print("Questão 5 - Binário")
 print("")
 
 print("Questão 6 - Dicionário")
-"""print("")
+print("")
 
 def dicionario(valores):
     cont = 0
@@ -107,11 +103,11 @@ def dicionario(valores):
             maior = valores[i]
         if valores[i] >= 7:
             cont += 1
-    media = soma/4
+    media = soma/len(valores)
     menor = maior
     for i in valores:
-        if i < menor:
-            menor = i
+        if valores[i] < menor:
+            menor = valores[i]
     print(f"Maior nota: {maior}")
     print(f"Menor nota: {menor}")
     print(f"Média da turma: {media}")
@@ -126,7 +122,6 @@ alunos = {
 
 dicionario(alunos)
 #não deu certo n sei porque, mas acredito que seja uma coisa simples, porém acho que já tentei tudo que sei.
-"""
 print("")
 
 #da questão 7 e a 8 não sei como fazer também
