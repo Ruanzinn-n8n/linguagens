@@ -1,2 +1,4 @@
-lista = list(map(int, input().split()))
-print(len(lista))
+dic = {}
+lista = list(input("Digite nomes: ").split())
+print(dic)
+print(lista)
