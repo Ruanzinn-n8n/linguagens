@@ -24,8 +24,7 @@ for i, numero in enumerate(numeros):
     if numero > maior:
         maior = numero
         i_maior = i
-print(i, maior)
-#travei em mostrar a primeira vez
+print(i_maior, maior)
 
 # Exercicio 4
 nomes = list(input().split())
@@ -45,7 +44,8 @@ def freq(n):
 
 nums = list(map(int, input().split()))
 resultado = freq(nums)
-print(resultado)
+for i in resultado:
+    print(f"{i}: {resultado[i]}")
 
 # Exercicio 6
 n = list(map(int, input().split()))
