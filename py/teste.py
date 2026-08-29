@@ -1,13 +1,19 @@
-def freq(n):
-    uni = {}
-    for i in n:
-        if i in uni:
-            uni[i] += 1
-        else:
-            uni[i] = 1
-    return uni
+def trocar(frase):
+    trocada = []
+    if len(frase) % 2 == 0:
+        for i in range(0, len(frase), 2):
+            trocada.append(frase[i+1])
+            trocada.append(frase[i])
+    else:
+        for i in range(0, len(frase), 2):
+            if i == len(frase)-1:
+                trocada.append(frase[i])
+            else:
+                trocada.append(frase[i+1])
+                trocada.append(frase[i])
+    return trocada
 
-nums = list(map(int, input().split()))
-resultado = freq(nums)
-for i in resultado:
-    print(f"{i}: {resultado[i]}")
+texto = list(input().split())
+new_f = trocar(texto)
+frase_j = " ".join(new_f)
+print(frase_j)
