@@ -13,3 +13,20 @@
 # "remove o 3" pontuação = 3 e sai da lista o 3, o 4 e o 2. sobra: {3, 5}
 # "remove o 3" pontuação = 6 e sai da lista apenas o 3. sobra: {5}
 # "remove o 5" pontuação = 11.
+
+def pontuacao(lista):
+    soma = 0
+    while len(lista) != 0:
+        for i in lista:
+            maior = i+1
+            menor = i-1
+            if maior not in lista:
+                soma += i
+                lista.remove(i)
+                if menor in lista:
+                 lista.remove(menor)
+    return soma
+
+nums = list(map(int, input().split(",")))
+pontos = pontuacao(nums)
+print(pontos)
