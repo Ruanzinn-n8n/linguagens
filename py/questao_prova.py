@@ -30,3 +30,9 @@ def pontuacao(lista):
 nums = list(map(int, input().split(",")))
 pontos = pontuacao(nums)
 print(pontos)
+
+
+#    Questão 10 - Sudoku
+# A questão pede que o programa receba uma entrada de numeros de um sudoku em que
+# o numero 0 representa um espaço vazio. o programa deve retornar o sudoku resolvido
+# e preenchido de acordo as regras do sudoku clássico.
