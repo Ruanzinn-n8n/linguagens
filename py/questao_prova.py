@@ -13,7 +13,7 @@
 # "remove o 3" pontuação = 3 e sai da lista o 3, o 4 e o 2. sobra: {3, 5}
 # "remove o 3" pontuação = 6 e sai da lista apenas o 3. sobra: {5}
 # "remove o 5" pontuação = 11.
-
+"""
 def pontuacao(lista):
     soma = 0
     while len(lista) != 0:
@@ -30,9 +30,22 @@ def pontuacao(lista):
 nums = list(map(int, input().split(",")))
 pontos = pontuacao(nums)
 print(pontos)
-
+"""
 
 #    Questão 10 - Sudoku
 # A questão pede que o programa receba uma entrada de numeros de um sudoku em que
 # o numero 0 representa um espaço vazio. o programa deve retornar o sudoku resolvido
 # e preenchido de acordo as regras do sudoku clássico.
+
+entrada = "5,3,0,0,7,0,0,0,0,6,0,0,1,9,5,0,0,0,0,9,8,0,0,0,0,6,0,8,0,0,0,6,0,0,0,3,4,0,0,8,0,3,0,0,1,7,0,0,0,2,0,0,0,6,0,6,0,0,0,0,2,8,0,0,0,0,4,1,9,0,0,5,0,0,0,0,8,0,0,7,9"
+
+def org_sudoku(input):
+    list_inp = list(map(int, input.split(",")))
+    sudoku = []
+    tam = len(list_inp)
+    for i in range(0, tam, 9):
+        linha_subs = []
+        for j in range(9):
+            n = i+j
+            linha_subs.append(list_inp[n])
+        sudoku.append(linha_subs.copy())
