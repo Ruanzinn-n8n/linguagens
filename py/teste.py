@@ -9,5 +9,27 @@ for i in range(0, tam, 9):
         n = i+j
         linha_subs.append(list_inp[n])
     sudoku.append(linha_subs.copy())
-for i in sudoku:
+
+
+def preencher(sudoku_org):
+    sudoku = []
+    tam = len(sudoku_org)
+    for linha in range(tam):
+        new_line = []
+        for coluna in range(tam):
+            test = sudoku_org[linha][coluna]
+            if test != 0:
+                new_line.append(test)
+            else:
+                for i in range(tam):
+                    if i not in sudoku_org[linha]:
+                        for j in range(tam):
+                            if j != sudoku_org[j][coluna]:
+                                test = j
+                new_line.append(test)
+        sudoku.append(new_line)
+    return sudoku
+
+resul = preencher(sudoku)
+for i in resul:
     print(*i)
