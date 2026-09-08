@@ -37,8 +37,6 @@ print(pontos)
 # o numero 0 representa um espaço vazio. o programa deve retornar o sudoku resolvido
 # e preenchido de acordo as regras do sudoku clássico.
 
-entrada = "5,3,0,0,7,0,0,0,0,6,0,0,1,9,5,0,0,0,0,9,8,0,0,0,0,6,0,8,0,0,0,6,0,0,0,3,4,0,0,8,0,3,0,0,1,7,0,0,0,2,0,0,0,6,0,6,0,0,0,0,2,8,0,0,0,0,4,1,9,0,0,5,0,0,0,0,8,0,0,7,9"
-
 def org_sudoku(input):
     list_inp = list(map(int, input.split(",")))
     sudoku = []
@@ -49,3 +47,10 @@ def org_sudoku(input):
             n = i+j
             linha_subs.append(list_inp[n])
         sudoku.append(linha_subs.copy())
+    return sudoku
+
+entrada = "5,3,0,0,7,0,0,0,0,6,0,0,1,9,5,0,0,0,0,9,8,0,0,0,0,6,0,8,0,0,0,6,0,0,0,3,4,0,0,8,0,3,0,0,1,7,0,0,0,2,0,0,0,6,0,6,0,0,0,0,2,8,0,0,0,0,4,1,9,0,0,5,0,0,0,0,8,0,0,7,9"
+
+teste = org_sudoku(entrada)
+for i in teste:
+    print(*i)
