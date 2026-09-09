@@ -21,14 +21,23 @@ def preencher(sudoku_org):
             if test != 0:
                 new_line.append(test)
             else:
+                cand_c = 0
                 for i in range(tam):
-                    if i not in sudoku_org[linha]:
+                    candidato_t = i+1
+                    if candidato_t == sudoku_org[linha][i]:
+                        break
+                    else:
                         for j in range(tam):
-                            if j != sudoku_org[j][coluna]:
-                                test = j
-                new_line.append(test)
+                            if candidato_t == sudoku_org[j][coluna]:
+                                break
+                            else:
+                                cand_c = candidato_t
+                                break
+                new_line.append(cand_c)
         sudoku.append(new_line)
+
     return sudoku
+                         
 
 resul = preencher(sudoku)
 for i in resul:

@@ -60,9 +60,9 @@ def preencher(sudoku_org):
                 new_line.append(test)
             else:
                 for i in range(tam):
-                    if i not in sudoku_org[linha]:
+                    if i+1 not in sudoku_org[linha]:
                         for j in range(tam):
-                            if j != sudoku_org[j][coluna]:
+                            if i+1 != sudoku_org[j][coluna]:
                                 test = j
                 new_line.append(test)
         sudoku.append(new_line)
