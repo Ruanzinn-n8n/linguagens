@@ -15,12 +15,14 @@ def ler_voto():
     return opc
 
 def cont_voto(opc):
-    paulo = 0
-    polvo = 0
-    gusto = 0
-    marcio_malonaro = 0
-    nulo = 0
-    branco = 0
+    candidatos = {
+        "paulo": 0,
+        "polvo": 0,
+        "gusto": 0,
+        "marcio_malonaro": 0,
+        "nulo": 0,
+        "branco": 0
+        }
     match opc:
         case 1:
             print("Votando em Paulo Matagal...")
@@ -33,7 +35,7 @@ def cont_voto(opc):
                 else:
                     print("Opção inválida...\n")
             if conf == "y":
-                paulo += 1
+                candidatos["paulo"] += 1
             print("\nVoto concluído!\n")
         case 2:
             print("Votando em Finâncio Polvo...")
@@ -46,7 +48,7 @@ def cont_voto(opc):
                 else:
                     print("Opção inválida...\n")
             if conf == "y":
-                polvo += 1
+                candidatos["polvo"] += 1
             print("\nVoto concluído!\n")
         case 3:
             print("Votando em Gusto Cuty Cuty...")
@@ -59,7 +61,7 @@ def cont_voto(opc):
                 else:
                     print("Opção inválida...\n")
             if conf == "y":
-                gusto += 1
+                candidatos["gusto"] += 1
             print("\nVoto concluído!\n")
         case 4:
             print("Votando em Márcio Malonaro...")
@@ -72,7 +74,7 @@ def cont_voto(opc):
                 else:
                     print("Opção inválida...\n")
             if conf == "y":
-                marcio_malonaro += 1
+                candidatos["marcio_malonaro"] += 1
             print("\nVoto concluído!\n")
         case 5:
             while True:
@@ -83,7 +85,7 @@ def cont_voto(opc):
                 else:
                     print("Opção inválida...\n")
             if conf == "y":
-                nulo += 1
+                candidatos["nulo"] += 1
             print("\nVoto concluído!\n")
         case 6:
             while True:
@@ -94,8 +96,14 @@ def cont_voto(opc):
                 else:
                     print("Opção inválida...\n")
             if conf == "y":
-                branco += 1
+                candidatos["branco"] += 1
             print("\nVoto concluído!\n")
+    return candidatos
+
+def calculo(numeros):
+    total = 0
+    for i in numeros:
+        total += numeros[i]
 
 def urna():
     dc = 0
