@@ -19,7 +19,6 @@ candidatos = {
     "Branco": 0
     }
 def cont_voto(opc):
-    global candidatos
     ver = 0
     sair = 0
     match opc:
@@ -113,10 +112,10 @@ def calculo(dic):
     venc = 0
     venc_name = 0
     for i, j in dic.items():
-        if j > venc:
+        if j > venc and "Nulo" != i != "Branco":
             venc = j
             venc_name = i
-        elif j == venc:
+        elif j == venc and "Nulo" != i != "Branco":
             venc_name = f"Empate!"
     return tot, porc_nulo, porc_branco, venc_name
 
