@@ -23,6 +23,7 @@ def cont_voto(opc):
         "nulo": 0,
         "branco": 0
         }
+    sair = 0
     match opc:
         case 1:
             print("Votando em Paulo Matagal...")
@@ -36,7 +37,6 @@ def cont_voto(opc):
                     print("Opção inválida...\n")
             if conf == "y":
                 candidatos["paulo"] += 1
-            print("\nVoto concluído!\n")
         case 2:
             print("Votando em Finâncio Polvo...")
             time.sleep(0.5)
@@ -49,7 +49,6 @@ def cont_voto(opc):
                     print("Opção inválida...\n")
             if conf == "y":
                 candidatos["polvo"] += 1
-            print("\nVoto concluído!\n")
         case 3:
             print("Votando em Gusto Cuty Cuty...")
             time.sleep(0.5)
@@ -62,7 +61,6 @@ def cont_voto(opc):
                     print("Opção inválida...\n")
             if conf == "y":
                 candidatos["gusto"] += 1
-            print("\nVoto concluído!\n")
         case 4:
             print("Votando em Márcio Malonaro...")
             time.sleep(0.5)
@@ -75,7 +73,6 @@ def cont_voto(opc):
                     print("Opção inválida...\n")
             if conf == "y":
                 candidatos["marcio_malonaro"] += 1
-            print("\nVoto concluído!\n")
         case 5:
             while True:
                 print("Tem certeza que deseja ANULAR seu voto? (y/n)")
@@ -86,7 +83,6 @@ def cont_voto(opc):
                     print("Opção inválida...\n")
             if conf == "y":
                 candidatos["nulo"] += 1
-            print("\nVoto concluído!\n")
         case 6:
             while True:
                 print("Tem certeza que deseja votar em BRANCO? (y/n)")
@@ -97,13 +93,15 @@ def cont_voto(opc):
                     print("Opção inválida...\n")
             if conf == "y":
                 candidatos["branco"] += 1
-            print("\nVoto concluído!\n")
-    return candidatos
+        case 0:
+            sair = 1
+    return candidatos, sair
 
-def calculo(numeros):
+def calculo(dic):
     total = 0
-    for i in numeros:
-        total += numeros[i]
+    #total de x em dic = dic[x]
+    for i in dic:
+        total += dic[i]
 
 def urna():
     dc = 0
@@ -125,3 +123,36 @@ def urna():
             print("|=======================|\n")
             dc = 1
         voto = ler_voto()
+        resul, sair = cont_voto(voto)
+        if sair == 1:
+            print("Votação encerrada! Aguarde o resultado...")
+            time.sleep(1)
+            print("#############################")
+            print("##        Resultado        ##")
+            print("#############################")
+            print(f"## Paulo Matagal: {resul["paulo"]}")
+            print(f"## Finâncio Polvo: {resul["polvo"]}")
+            print(f"## Gusto Cuty Cuty: {resul["gusto"]}")
+            print(f"## Márcio Malonaro: {resul["marcio_malonaro"]}")
+            print(f"## Voto Nulo: {resul["nulo"]}")
+            print(f"## Voto em Branco: {resul["branco"]}")
+            print(f"## % de votos nulos: ")
+            print(f"## % de votos em branco:")
+            print(f"## Total:")
+            print(f"##### Candidato Vencedor: ")
+            break
+        else:
+            print("\nVoto concluído!")
+            print("...\n")
+            time.sleep(0.5)
+            print("Deseja ver as opções novamente? (y/n)")
+            ver = input().lower()
+            while True:
+                if ver == "y" or ver == "n":
+                    break
+                else:
+                    print("Opção inválida...\n")
+            if ver == "y":
+                dc = 0
+            else:
+                print("Próximo a votar...")
